@@ -8,5 +8,5 @@ on:
 jobs:
   ci:
     name: ci
-    uses: rhoribe/test/.github/workflows/01-terraform-aws-ci.yaml
+    uses: rhoribe/test/.github/workflows/01-terraform-aws-ci.yaml@main
     secrets: inherit
