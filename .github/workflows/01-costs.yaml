@@ -1,0 +1,14 @@
+name: "CI - Terraform  Infrastructure"
+
+permissions:
+  pull-requests: write
+  contents: read
+
+on:
+  pull-request:
+
+jobs:
+  costs: 
+    name: costs
+    uses: rhoribe/test/.github/workflows/02-terraform-aws-costs.yaml@feature/test
+    secrets: inherit
