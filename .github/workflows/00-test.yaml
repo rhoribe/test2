@@ -23,5 +23,7 @@ jobs:
   costs: 
     name: costs
     uses: rhoribe/test/.github/workflows/02-terraform-aws-costs.yaml@feature/test
+    with:
+      PR: ${{ jobs.open-pr.steps.open-pr.outputs.pr_number }}"
     needs: [pr,ci]
     secrets: inherit
