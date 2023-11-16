@@ -8,8 +8,6 @@ on:
   push:
     branches:
       - "feature/**"
-    inputs:
-      PR:
 
 jobs:
   ci:
