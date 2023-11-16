@@ -9,6 +9,8 @@ on:
     branches:
       - "feature/**"
 
+env:
+  GITHUB_PR_NUMBER: ${{github.event.pull_request.number}}
 jobs:
   ci:
     name: ci
@@ -19,11 +21,4 @@ jobs:
     name: pr
     uses: rhoribe/test/.github/workflows/00-open-pr.yaml@feature/test
     needs: ci
-
-  costs: 
-    name: costs
-    uses: rhoribe/test/.github/workflows/02-terraform-aws-costs.yaml@feature/test
-    with:
-      PR: ${{github.event.issue.number}} 
-    needs: [pr,ci]
-    secrets: inherit
+    
