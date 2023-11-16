@@ -7,7 +7,7 @@ permissions:
 on:
   push:
     branches:
-      - "main"
+      - "feature/**"
 
 jobs:
   ci:
@@ -23,5 +23,7 @@ jobs:
   costs: 
     name: costs
     uses: rhoribe/test/.github/workflows/02-terraform-aws-costs.yaml@feature/test
+    with:
+      PR: ${{ github.event.number }}
     needs: [pr,ci]
     secrets: inherit
