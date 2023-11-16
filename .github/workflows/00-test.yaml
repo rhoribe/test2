@@ -24,6 +24,6 @@ jobs:
     name: costs
     uses: rhoribe/test/.github/workflows/02-terraform-aws-costs.yaml@feature/test
     with:
-      PR: ${{ github.event.issue.pull_request }}
+      PR: ${{ needs.pr.outputs.pr_number }}
     needs: [pr,ci]
     secrets: inherit
