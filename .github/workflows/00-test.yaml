@@ -2,6 +2,7 @@ name: "CI - Terraform  Infrastructure"
 
 permissions:
   pull-requests: write
+  contents: read
 
 on:
   push:
