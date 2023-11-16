@@ -1,0 +1,12 @@
+name: "CI - Terraform  Infrastructure"
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  ci:
+    name: ci
+    uses: rhoribe/test/.github/workflows/01-terraform-aws-ci.yaml
+    secrets: inherit
