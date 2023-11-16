@@ -19,7 +19,6 @@ jobs:
     name: pr
     uses: rhoribe/test/.github/workflows/00-open-pr.yaml@feature/test
     needs: ci
-    secrets: inherit
 
   costs: 
     name: costs
