@@ -15,3 +15,9 @@ jobs:
     name: pr
     uses: rhoribe/test/.github/workflows/00-open-pr.yaml@feature/test
     needs: ci
+
+  costs: 
+    name: costs
+    uses: rhoribe/test/.github/workflows/02-terraform-aws-costs.yaml@feature/test
+    needs: [pr,ci]
+    secrets: inherit
