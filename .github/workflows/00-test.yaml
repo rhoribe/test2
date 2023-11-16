@@ -7,7 +7,7 @@ permissions:
 on:
   push:
     branches:
-      - "main"
+      - "feature/**"
 
 jobs:
   ci:
