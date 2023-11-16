@@ -1,4 +1,4 @@
-name: "CI - Terraform  Infrastructure"
+name: "Costs - Terraform  Infrastructure"
 
 permissions:
   pull-requests: write
