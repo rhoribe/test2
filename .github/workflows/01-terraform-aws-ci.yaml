@@ -10,6 +10,3 @@ jobs:
     name: ci
     uses: rhoribe/test/.github/workflows/01-terraform-aws-ci.yaml@feature/test
     secrets: inherit # pass all secrets
-    with:
-      INPUT_1: input1
-      INPUT_2: input2
